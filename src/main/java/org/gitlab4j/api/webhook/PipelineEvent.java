@@ -18,6 +18,7 @@ public class PipelineEvent extends AbstractEvent {
     private EventProject project;
     private EventCommit commit;
     private List<Job> jobs;
+    private List<Job> builds;
 
     public String getObjectKind() {
         return (OBJECT_KIND);
@@ -66,6 +67,14 @@ public class PipelineEvent extends AbstractEvent {
 
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
+    }
+
+    public List<Job> getBuilds() {
+        return builds;
+    }
+
+    public void setBuilds(List<Job> builds) {
+        this.builds = builds;
     }
 
     public static class ObjectAttributes {
